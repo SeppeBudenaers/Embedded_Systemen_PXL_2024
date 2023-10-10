@@ -71,7 +71,7 @@ int main(void)
     for (;;)
     {
         /* Create packet to be sent to slave */
-        buffer[PACKET_CMD_POS] = cmd;//cmd is your packet
+        buffer[PACKET_CMD_POS] = cmd;
 
         /* Send packet with command to the slave */
         cyhal_i2c_master_write(&mI2C, I2C_SLAVE_ADDR,buffer, PACKET_SIZE, 0, false);
